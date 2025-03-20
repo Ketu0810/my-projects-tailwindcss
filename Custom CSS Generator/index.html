@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            background-color: #1E1E1E; /* Matte Dark Gray */
+            color: #E0E0E0; /* Light Gray Text */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6">
+
+    <div class="bg-[#2A2A2A] text-[#E0E0E0] shadow-lg rounded-xl p-6 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-4">🎨 Custom CSS Generator</h1>
+        
+        <div class="space-y-3">
+            <label class="block">Background Color:
+                <input type="color" id="bgColor" class="w-full h-10 rounded-lg border border-gray-600 bg-[#333]">
+            </label>
+            <label class="block">Text Color:
+                <input type="color" id="textColor" class="w-full h-10 rounded-lg border border-gray-600 bg-[#333]">
+            </label>
+            <label class="block">Font Size (px):
+                <input type="number" id="fontSize" value="16" class="w-full p-2 border border-gray-600 rounded-md bg-[#333]">
+            </label>
+            <label class="block">Padding (px):
+                <input type="number" id="padding" value="10" class="w-full p-2 border border-gray-600 rounded-md bg-[#333]">
+            </label>
+        </div>
+
+        <div id="preview" class="mt-4 p-4 text-center bg-[#444] rounded-lg">
+            Live Preview
+        </div>
+
+        <textarea id="cssOutput" readonly class="w-full mt-4 p-2 border border-gray-600 rounded-md bg-[#333]"></textarea>
+
+        <div class="flex gap-2 mt-4">
+            <button id="copyCss" class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md">Copy CSS</button>
+            <button id="exportCss" class="w-1/2 bg-green-500 hover:bg-green-600 text-white py-2 rounded-md">Export CSS</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background-color: #FDF6E3; /* Soft Beige */
+    font-family: 'Poppins', sans-serif;
+}
+
+.recipe-card {
+    background: #FFF5E1;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #FF6B6B;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #FF3B3B;
+}
+
+.btn-secondary {
+    background-color: #FFA45B;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #FF8A2A;
+}

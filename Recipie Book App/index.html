@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-6">
+    <h1 class="text-3xl font-bold text-center text-orange-600">🍊 My Recipe Book 🍓</h1>
+
+    <div class="mt-6 flex justify-center">
+        <button class="btn btn-primary" onclick="openRecipeModal()">➕ Add Recipe</button>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="recipe-list">
+        <!-- Recipes will be inserted here -->
+    </div>
+
+    <!-- Modal -->
+    <div id="recipe-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-xl font-semibold text-orange-600">Add New Recipe</h2>
+            <input type="hidden" id="recipe-id">
+            <input id="recipe-name" type="text" placeholder="Recipe Name" class="w-full p-2 border rounded mt-2">
+            <textarea id="recipe-ingredients" placeholder="Ingredients" class="w-full p-2 border rounded mt-2"></textarea>
+            <textarea id="recipe-instructions" placeholder="Instructions" class="w-full p-2 border rounded mt-2"></textarea>
+            <div class="mt-4 flex justify-between">
+                <button class="btn btn-secondary" onclick="closeRecipeModal()">❌ Cancel</button>
+                <button class="btn btn-primary" onclick="saveRecipe()">✅ Save</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

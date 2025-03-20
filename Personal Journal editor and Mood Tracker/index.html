@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  class="transition-colors duration-300">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Journal</title>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Poppins] bg-gradient-to-br from-[#F2F7F5] to-[#DDEFE7] dark:from-[#1A1A1A] dark:to-[#2A2A2A] text-[#333] dark:text-white min-h-screen flex items-center justify-center p-6">
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle" class="fixed top-5 right-5 p-2 rounded-full bg-gray-200 dark:bg-gray-600 shadow-md text-xl transition">
+    🌙
+  </button>
+
+  <!-- Journal Container -->
+  <div class="w-full max-w-3xl bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg p-8 rounded-3xl shadow-2xl space-y-6">
+    <h1 class="text-3xl font-semibold text-center">My Calm Journal</h1>
+
+    <!-- Journal Form -->
+    <div class="flex flex-col gap-4">
+      <input type="date" id="entryDate" required class="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-white focus:ring-2 focus:ring-[#A7C4BC]">
+      
+      <textarea id="entryText" placeholder="What's on your mind?" required class="w-full h-32 p-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-white focus:ring-2 focus:ring-[#A7C4BC]"></textarea>
+      
+      <div id="moodSelector" class="flex flex-wrap justify-center gap-3">
+        <span class="mood" data-mood="😄">😄</span>
+        <span class="mood" data-mood="😐">😐</span>
+        <span class="mood" data-mood="😢">😢</span>
+        <span class="mood" data-mood="😍">😍</span>
+        <span class="mood" data-mood="🤔">🤔</span>
+        <span class="mood" data-mood="😴">😴</span>
+        <span class="mood" data-mood="😡">😡</span>
+        <span class="mood" data-mood="😎">😎</span>
+      </div>
+
+      <button id="saveEntry" class="w-full p-3 rounded-xl bg-[#A7C4BC] text-white font-semibold shadow hover:bg-[#88A6BF] transition">
+        Save Entry
+      </button>
+    </div>
+
+    <!-- Past Entries -->
+    <h2 class="text-2xl font-semibold">Past Entries</h2>
+    <div id="entries" class="max-h-60 overflow-y-auto space-y-4 pr-2"></div>
+  </div>
+
+  <!-- Compiled JS -->
+  <script src="dist/script.js" defer></script>
+</body>
+</html>

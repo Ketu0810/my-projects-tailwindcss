@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Digital Clock</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center h-screen flex-col">
+    
+    <div class="container text-center">
+        <div class="relative p-6 bg-gray-800 rounded-xl shadow-lg">
+            <div id="digital-clock" class="text-5xl font-bold"></div>
+            <canvas id="analog-clock" class="hidden"></canvas>
+        </div>
+
+        <!-- Controls -->
+        <div class="mt-4 flex flex-col sm:flex-row gap-4">
+            <button id="toggle-mode" class="px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-800">Switch Mode</button>
+            <input type="color" id="bg-color-picker" class="w-10 h-10 rounded-full border">
+            <input type="color" id="font-color-picker" class="w-10 h-10 rounded-full border">
+            <select id="font-style" class="px-2 py-1 bg-gray-700 text-white rounded-lg">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Times New Roman">Times New Roman</option>
+            </select>
+        </div>
+
+        <!-- Alarm -->
+        <div class="mt-4">
+            <input type="time" id="alarm-time" class="p-2 bg-gray-700 text-white rounded-lg">
+            <button id="set-alarm" class="px-4 py-2 bg-red-600 rounded-lg hover:bg-red-700">Set Alarm</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

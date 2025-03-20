@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Steps Tracker</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-neutral p-6 flex items-center justify-center">
+  <div class="bg-white p-6 rounded-xl shadow-md max-w-md w-full space-y-5">
+    <h1 class="text-2xl font-heading text-primary">Daily Steps Tracker</h1>
+
+    <label for="goal" class="block text-left font-medium">Set Daily Step Goal:</label>
+    <input type="number" id="goal" placeholder="Enter step goal"
+      class="w-full p-3 rounded-lg border border-gray-300"/>
+
+    <label for="steps" class="block text-left font-medium">Enter Steps:</label>
+    <input type="number" id="steps" placeholder="Enter steps taken today"
+      class="w-full p-3 rounded-lg border border-gray-300"/>
+
+    <button id="addSteps"
+      class="w-full p-3 rounded-lg bg-primary text-white font-medium hover:bg-blue-700 transition">
+      Add Steps
+    </button>
+
+    <div class="w-full h-3 bg-gray-300 rounded-full overflow-hidden">
+      <div id="progress-bar" class="h-full bg-green-500 transition-all"></div>
+    </div>
+    <p id="progress-text" class="text-sm font-bold">0 / 0 steps</p>
+
+    <h2 class="text-xl font-heading text-secondary">Achievements</h2>
+    <div id="badges" class="flex flex-wrap gap-2 justify-center"></div>
+
+    <button id="reset"
+      class="w-full p-3 rounded-lg bg-accent text-white font-medium hover:bg-rose-600 transition">
+      Reset
+    </button>
+  </div>
+
+  <script src="script.ts" type="module"></script>
+  <script src="./script.js"></script>
+
+</body>
+</html>
